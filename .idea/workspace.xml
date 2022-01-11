@@ -4,26 +4,26 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d8910a1-58a2-49ee-9df1-428076b6027f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/go_learning.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/210505/main/HtmlToPDF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/210505/main/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter/main/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter01/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter02/array/demo01/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter10_log/demo01/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter10_log/demo02/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter11_io/demo01/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter12/05tail_demo/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter12/06kafka_demo/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter12/my.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter13/main/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/redis_lock/redsync" afterDir="false" />
+    <list default="true" id="4d8910a1-58a2-49ee-9df1-428076b6027f" name="Changes" comment="add es">
+      <change afterPath="$PROJECT_DIR$/Gee-Web/day01/base1/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gee-Web/day01/base2/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gee-Web/day01/base3/gee/gee.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gee-Web/day01/base3/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gee-Web/day02/gee/context.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gee-Web/day02/gee/gee.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gee-Web/day02/gee/router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Gee-Web/day02/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/day01.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/listnode/day01/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/listnode/day02/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/listnode/day03/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/listnode/day04/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/listnode/day05/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/listnode/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/tree/day01/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/210505/main/HtmlToPDF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/210505/main/main.go" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,10 +83,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/leetcode" />
       <recent name="$PROJECT_DIR$/chapter10_log/demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go_learning/chapter13/main">
+  <component name="RunManager" selected="Go Build.go build go_learning/leetcode/listnode">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
@@ -96,49 +97,49 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/210505/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/Gee-Web/day01/base2" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/210505/main" />
+      <package value="go_learning/Gee-Web/day01/base2" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/210505/main/main.go" />
+      <filePath value="$PROJECT_DIR$/Gee-Web/day01/base2/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/chapter02/array/demo01" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/Gee-Web/day01/base3" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/chapter02/array/demo01" />
+      <package value="go_learning/Gee-Web/day01/base3" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/chapter02/array/demo01/main.go" />
+      <filePath value="$PROJECT_DIR$/Gee-Web/day01/base3/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/chapter12/05tail_demo" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/Gee-Web/day02" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/chapter12/05tail_demo" />
+      <package value="go_learning/Gee-Web/day02" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/chapter12/05tail_demo/main.go" />
+      <filePath value="$PROJECT_DIR$/Gee-Web/day02/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/chapter13/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/chapter01" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/chapter13/main" />
+      <package value="go_learning/chapter01" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/chapter13/main/main.go" />
+      <filePath value="$PROJECT_DIR$/chapter01/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/chapter/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/leetcode/listnode" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/chapter/main" />
+      <package value="go_learning/leetcode/listnode" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/chapter/main/main.go" />
+      <filePath value="$PROJECT_DIR$/leetcode/listnode/main.go" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -153,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build go_learning/chapter13/main" />
-        <item itemvalue="Go Build.go build go_learning/210505/main" />
-        <item itemvalue="Go Build.go build go_learning/chapter/main" />
-        <item itemvalue="Go Build.go build go_learning/chapter02/array/demo01" />
-        <item itemvalue="Go Build.go build go_learning/chapter12/05tail_demo" />
+        <item itemvalue="Go Build.go build go_learning/leetcode/listnode" />
+        <item itemvalue="Go Build.go build go_learning/chapter01" />
+        <item itemvalue="Go Build.go build go_learning/Gee-Web/day02" />
+        <item itemvalue="Go Build.go build go_learning/Gee-Web/day01/base3" />
+        <item itemvalue="Go Build.go build go_learning/Gee-Web/day01/base2" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +180,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="add es" />
+    <option name="LAST_COMMIT_MESSAGE" value="add es" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
