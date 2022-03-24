@@ -1,0 +1,141 @@
+➜  defer_study git:(main) ✗ go tool compile -N -l -S main.go
+"".main STEXT size=128 args=0x0 locals=0x68 funcid=0x0
+        0x0000 00000 (main.go:5)        TEXT    "".main(SB), ABIInternal, $112-0
+        0x0000 00000 (main.go:5)        MOVD    16(g), R1
+        0x0004 00004 (main.go:5)        PCDATA  $0, $-2
+        0x0004 00004 (main.go:5)        MOVD    RSP, R2
+        0x0008 00008 (main.go:5)        CMP     R1, R2
+        0x000c 00012 (main.go:5)        BLS     108
+        0x0010 00016 (main.go:5)        PCDATA  $0, $-1
+        0x0010 00016 (main.go:5)        MOVD.W  R30, -112(RSP)
+        0x0014 00020 (main.go:5)        MOVD    R29, -8(RSP)
+        0x0018 00024 (main.go:5)        SUB     $8, RSP, R29
+        0x001c 00028 (main.go:5)        FUNCDATA        ZR, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+        0x001c 00028 (main.go:5)        FUNCDATA        $1, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+        0x001c 00028 (main.go:6)        MOVW    ZR, ""..autotmp_0-80(SP)
+        0x0020 00032 (main.go:6)        MOVD    $"".main.func1·f(SB), R0
+        0x0028 00040 (main.go:6)        MOVD    R0, ""..autotmp_0-56(SP)
+        0x002c 00044 (main.go:6)        MOVD    $""..autotmp_0-80(SP), R0
+        0x0030 00048 (main.go:6)        MOVD    R0, 8(RSP)
+        0x0034 00052 (main.go:6)        PCDATA  $1, ZR
+        0x0034 00052 (main.go:6)        CALL    runtime.deferprocStack(SB)
+        0x0038 00056 (main.go:6)        CMP     ZR, R0
+        0x003c 00060 (main.go:6)        BNE     88
+        0x0040 00064 (main.go:6)        JMP     68
+        0x0044 00068 (main.go:9)        HINT    ZR
+        0x0048 00072 (main.go:9)        CALL    runtime.deferreturn(SB)
+        0x004c 00076 (main.go:9)        MOVD    -8(RSP), R29
+        0x0050 00080 (main.go:9)        MOVD.P  112(RSP), R30
+        0x0054 00084 (main.go:9)        RET     (R30)
+        0x0058 00088 (main.go:6)        HINT    ZR
+        0x005c 00092 (main.go:6)        CALL    runtime.deferreturn(SB)
+        0x0060 00096 (main.go:6)        MOVD    -8(RSP), R29
+        0x0064 00100 (main.go:6)        MOVD.P  112(RSP), R30
+        0x0068 00104 (main.go:6)        RET     (R30)
+        0x006c 00108 (main.go:6)        NOP
+        0x006c 00108 (main.go:5)        PCDATA  $1, $-1
+        0x006c 00108 (main.go:5)        PCDATA  $0, $-2
+        0x006c 00108 (main.go:5)        MOVD    R30, R3
+        0x0070 00112 (main.go:5)        CALL    runtime.morestack_noctxt(SB)
+        0x0074 00116 (main.go:5)        PCDATA  $0, $-1
+        0x0074 00116 (main.go:5)        JMP     0
+        0x0000 81 0b 40 f9 e2 03 00 91 5f 00 01 eb 09 03 00 54  ..@....._......T
+        0x0010 fe 0f 19 f8 fd 83 1f f8 fd 23 00 d1 ff 1b 00 b9  .........#......
+        0x0020 00 00 00 90 00 00 00 91 e0 1b 00 f9 e0 63 00 91  .............c..
+        0x0030 e0 07 00 f9 00 00 00 94 1f 00 1f eb e1 00 00 54  ...............T
+        0x0040 01 00 00 14 1f 20 03 d5 00 00 00 94 fd 83 5f f8  ..... ........_.
+        0x0050 fe 07 47 f8 c0 03 5f d6 1f 20 03 d5 00 00 00 94  ..G..._.. ......
+        0x0060 fd 83 5f f8 fe 07 47 f8 c0 03 5f d6 e3 03 1e aa  .._...G..._.....
+        0x0070 00 00 00 94 e3 ff ff 17 00 00 00 00 00 00 00 00  ................
+        rel 32+8 t=3 "".main.func1·f+0
+        rel 52+4 t=9 runtime.deferprocStack+0
+        rel 72+4 t=9 runtime.deferreturn+0
+        rel 92+4 t=9 runtime.deferreturn+0
+        rel 112+4 t=9 runtime.morestack_noctxt+0
+"".main.func1 STEXT size=144 args=0x0 locals=0x68 funcid=0x0
+        0x0000 00000 (main.go:6)        TEXT    "".main.func1(SB), ABIInternal, $112-0
+        0x0000 00000 (main.go:6)        MOVD    16(g), R1
+        0x0004 00004 (main.go:6)        PCDATA  $0, $-2
+        0x0004 00004 (main.go:6)        MOVD    RSP, R2
+        0x0008 00008 (main.go:6)        CMP     R1, R2
+        0x000c 00012 (main.go:6)        BLS     120
+        0x0010 00016 (main.go:6)        PCDATA  $0, $-1
+        0x0010 00016 (main.go:6)        MOVD.W  R30, -112(RSP)
+        0x0014 00020 (main.go:6)        MOVD    R29, -8(RSP)
+        0x0018 00024 (main.go:6)        SUB     $8, RSP, R29
+        0x001c 00028 (main.go:6)        FUNCDATA        ZR, gclocals·33cdeccccebe80329f1fdbee7f5874cb(SB)
+        0x001c 00028 (main.go:6)        FUNCDATA        $1, gclocals·26c19b003b4032a46d3e8db29831f3fe(SB)
+        0x001c 00028 (main.go:6)        FUNCDATA        $2, "".main.func1.stkobj(SB)
+        0x001c 00028 (main.go:7)        STP     (ZR, ZR), ""..autotmp_0-40(SP)
+        0x0020 00032 (main.go:7)        MOVD    $""..autotmp_0-40(SP), R0
+        0x0024 00036 (main.go:7)        MOVD    R0, ""..autotmp_2-48(SP)
+        0x0028 00040 (main.go:7)        PCDATA  $0, $-2
+        0x0028 00040 (main.go:7)        MOVB    (R0), R27
+        0x002c 00044 (main.go:7)        PCDATA  $0, $-1
+        0x002c 00044 (main.go:7)        MOVD    $type.string(SB), R1
+        0x0034 00052 (main.go:7)        MOVD    R1, ""..autotmp_0-40(SP)
+        0x0038 00056 (main.go:7)        MOVD    $""..stmp_0(SB), R1
+        0x0040 00064 (main.go:7)        MOVD    R1, ""..autotmp_0-32(SP)
+        0x0044 00068 (main.go:7)        PCDATA  $0, $-2
+        0x0044 00068 (main.go:7)        MOVB    (R0), R27
+        0x0048 00072 (main.go:7)        PCDATA  $0, $-1
+        0x0048 00072 (main.go:7)        JMP     76
+        0x004c 00076 (main.go:7)        MOVD    R0, ""..autotmp_1-24(SP)
+        0x0050 00080 (main.go:7)        MOVD    $1, R1
+        0x0054 00084 (main.go:7)        MOVD    R1, ""..autotmp_1-16(SP)
+        0x0058 00088 (main.go:7)        MOVD    R1, ""..autotmp_1-8(SP)
+        0x005c 00092 (main.go:7)        MOVD    R0, 8(RSP)
+        0x0060 00096 (main.go:7)        MOVD    R1, 16(RSP)
+        0x0064 00100 (main.go:7)        MOVD    R1, 24(RSP)
+        0x0068 00104 (main.go:7)        PCDATA  $1, ZR
+        0x0068 00104 (main.go:7)        CALL    fmt.Println(SB)
+        0x006c 00108 (main.go:8)        MOVD    -8(RSP), R29
+        0x0070 00112 (main.go:8)        MOVD.P  112(RSP), R30
+        0x0074 00116 (main.go:8)        RET     (R30)
+        0x0078 00120 (main.go:8)        NOP
+        0x0078 00120 (main.go:6)        PCDATA  $1, $-1
+        0x0078 00120 (main.go:6)        PCDATA  $0, $-2
+        0x0078 00120 (main.go:6)        MOVD    R30, R3
+        0x007c 00124 (main.go:6)        CALL    runtime.morestack_noctxt(SB)
+        0x0080 00128 (main.go:6)        PCDATA  $0, $-1
+        0x0080 00128 (main.go:6)        JMP     0
+        0x0000 81 0b 40 f9 e2 03 00 91 5f 00 01 eb 69 03 00 54  ..@....._...i..T
+        0x0010 fe 0f 19 f8 fd 83 1f f8 fd 23 00 d1 ff 7f 04 a9  .........#......
+        0x0020 e0 03 01 91 e0 1f 00 f9 1b 00 80 39 01 00 00 90  ...........9....
+        0x0030 21 00 00 91 e1 23 00 f9 01 00 00 90 21 00 00 91  !....#......!...
+        0x0040 e1 27 00 f9 1b 00 80 39 01 00 00 14 e0 2b 00 f9  .'.....9.....+..
+        0x0050 e1 03 40 b2 e1 2f 00 f9 e1 33 00 f9 e0 07 00 f9  ..@../...3......
+        0x0060 e1 0b 00 f9 e1 0f 00 f9 00 00 00 94 fd 83 5f f8  .............._.
+        0x0070 fe 07 47 f8 c0 03 5f d6 e3 03 1e aa 00 00 00 94  ..G..._.........
+        0x0080 e0 ff ff 17 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        rel 0+0 t=24 type.string+0
+        rel 44+8 t=3 type.string+0
+        rel 56+8 t=3 ""..stmp_0+0
+        rel 104+4 t=9 fmt.Println+0
+        rel 124+4 t=9 runtime.morestack_noctxt+0
+go.cuinfo.packagename. SDWARFCUINFO dupok size=0
+        0x0000 6d 61 69 6e                                      main
+""..inittask SNOPTRDATA size=32
+        0x0000 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00  ................
+        0x0010 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        rel 24+8 t=1 fmt..inittask+0
+go.string."binshow" SRODATA dupok size=7
+        0x0000 62 69 6e 73 68 6f 77                             binshow
+""..stmp_0 SRODATA static size=16
+        0x0000 00 00 00 00 00 00 00 00 07 00 00 00 00 00 00 00  ................
+        rel 0+8 t=1 go.string."binshow"+0
+runtime.gcbits.02 SRODATA dupok size=1
+        0x0000 02                                               .
+type..importpath.fmt. SRODATA dupok size=5
+        0x0000 00 03 66 6d 74                                   ..fmt
+"".main.func1·f SRODATA dupok size=8
+        0x0000 00 00 00 00 00 00 00 00                          ........
+        rel 0+8 t=1 "".main.func1+0
+gclocals·33cdeccccebe80329f1fdbee7f5874cb SRODATA dupok size=8
+        0x0000 01 00 00 00 00 00 00 00                          ........
+gclocals·26c19b003b4032a46d3e8db29831f3fe SRODATA dupok size=9
+        0x0000 01 00 00 00 06 00 00 00 00                       .........
+"".main.func1.stkobj SRODATA static size=32
+        0x0000 01 00 00 00 00 00 00 00 d8 ff ff ff 10 00 00 00  ................
+        0x0010 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+        rel 24+8 t=1 runtime.gcbits.02+0

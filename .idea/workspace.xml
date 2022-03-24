@@ -5,17 +5,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d8910a1-58a2-49ee-9df1-428076b6027f" name="Changes" comment="add es">
-      <change afterPath="$PROJECT_DIR$/chapter11_test/main/echo_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter11_test/main/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter11_test/storage/storage1.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter11_test/storage/storage2.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter11_test/word/block.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter11_test/word/cpu.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter11_test/word/mem.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter11_test/word/word.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter11_test/word/word.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chapter11_test/word/word_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/01-pointer/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/03-slice/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/04-map/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/05-struct/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/05-struct/person.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/05-struct/student/student.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/array_study/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/defer_study/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/defer_study/main.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/defer_study/获取汇编指令.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/for_range_study/main.S" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/for_range_study/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01Go_Basic/for_range_study/main.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day02/gee/context.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day03/gee/context.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day03/gee/gee.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day03/gee/router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day03/gee/router_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day03/gee/trie.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day03/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day04/gee/gee.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day04/gee/gee_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day04/gee/router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day04/gee/trie.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day04/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day05/gee/context.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day05/gee/gee.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day05/gee/gee_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day05/gee/logger.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day05/gee/router.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day05/gee/router_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day05/gee/trie.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day05/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/GeeRPC/client.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/GeeRPC/codec/codec.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/GeeRPC/codec/gob.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/GeeRPC/main/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/GeeRPC/main/main_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/7days-golang/GeeRPC/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/context_study/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design_pattern_study/builder/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design_pattern_study/responsibilityChain/cashier.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design_pattern_study/responsibilityChain/department.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design_pattern_study/responsibilityChain/docter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design_pattern_study/responsibilityChain/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design_pattern_study/responsibilityChain/medical.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design_pattern_study/responsibilityChain/patient.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/design_pattern_study/responsibilityChain/reception.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goroutine_study/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/net_study/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sync_study/01_atmoic_study/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sync_study/main/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sync_study/once_study/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sync_study/waitGroup_study/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gee-Web/day01/base1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day01/base1/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gee-Web/day01/base2/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day01/base2/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gee-Web/day01/base3/gee/gee.go" beforeDir="false" afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day01/base3/gee/gee.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gee-Web/day01/base3/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day01/base3/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gee-Web/day02/gee/context.go" beforeDir="false" afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day04/gee/context.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gee-Web/day02/gee/gee.go" beforeDir="false" afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day02/gee/gee.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gee-Web/day02/gee/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day02/gee/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gee-Web/day02/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day02/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chapter01/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/chapter01/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis_lock/redsync" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +79,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="UML Use Case" />
+        <option value="UML Sequence" />
         <option value="Go File" />
       </list>
     </option>
@@ -46,9 +102,11 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$USER_HOME$/sdk/go1.17.2/src/net/http/server.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/chapter12/05tail_demo/main.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/chapter10_log/demo02/main.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/go.mod" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/sdk/go1.17.2/src/net/net.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/go.sum" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="22Q2fgLfMt76ruqUsHoQrObKSwn" />
@@ -64,6 +122,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="DefaultPlantUmlFileTemplate" value="UML Sequence" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -72,15 +131,23 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/7days-golang/GeeRPC/day01" />
+      <recent name="$PROJECT_DIR$/Gee-Web/day05" />
+      <recent name="$PROJECT_DIR$/Gee-Web/day04/gee" />
+      <recent name="$PROJECT_DIR$/Gee-Web/day03/gee" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/7days-golang/GeeRPC" />
+      <recent name="$PROJECT_DIR$/7days-golang" />
       <recent name="$PROJECT_DIR$/leetcode" />
       <recent name="$PROJECT_DIR$/chapter10_log/demo" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Build.go build go_learning/chapter11_test/main">
+  <component name="RunManager" selected="Go Build.go build go_learning/design_pattern_study/responsibilityChain">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
@@ -90,49 +157,49 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/Gee-Web/day01/base3" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/01Go_Basic/01-pointer" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/Gee-Web/day01/base3" />
+      <package value="go_learning/01Go_Basic/01-pointer" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/Gee-Web/day01/base3/main.go" />
+      <filePath value="$PROJECT_DIR$/01Go_Basic/01-pointer/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/Gee-Web/day02" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/01Go_Basic/03-slice" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/Gee-Web/day02" />
+      <package value="go_learning/01Go_Basic/03-slice" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/Gee-Web/day02/main.go" />
+      <filePath value="$PROJECT_DIR$/01Go_Basic/03-slice/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/chapter01" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/01Go_Basic/05-struct" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/chapter01" />
+      <package value="go_learning/01Go_Basic/05-struct" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/chapter01/main.go" />
+      <filePath value="$PROJECT_DIR$/01Go_Basic/05-struct/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/chapter11_test/main" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/design_pattern_study/responsibilityChain" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/chapter11_test/main" />
+      <package value="go_learning/design_pattern_study/responsibilityChain" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/chapter11_test/main/main.go" />
+      <filePath value="$PROJECT_DIR$/design_pattern_study/responsibilityChain/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/leetcode/listnode" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/goroutine_study" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/leetcode/listnode" />
+      <package value="go_learning/goroutine_study" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/leetcode/listnode/main.go" />
+      <filePath value="$PROJECT_DIR$/goroutine_study/main.go" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -147,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build go_learning/chapter11_test/main" />
-        <item itemvalue="Go Build.go build go_learning/leetcode/listnode" />
-        <item itemvalue="Go Build.go build go_learning/chapter01" />
-        <item itemvalue="Go Build.go build go_learning/Gee-Web/day02" />
-        <item itemvalue="Go Build.go build go_learning/Gee-Web/day01/base3" />
+        <item itemvalue="Go Build.go build go_learning/design_pattern_study/responsibilityChain" />
+        <item itemvalue="Go Build.go build go_learning/01Go_Basic/05-struct" />
+        <item itemvalue="Go Build.go build go_learning/goroutine_study" />
+        <item itemvalue="Go Build.go build go_learning/01Go_Basic/03-slice" />
+        <item itemvalue="Go Build.go build go_learning/01Go_Basic/01-pointer" />
       </list>
     </recent_temporary>
   </component>
@@ -178,5 +245,12 @@
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="GoTestRunConfiguration">
+        <watch expression="key" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
