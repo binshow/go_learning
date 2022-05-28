@@ -1,0 +1,22 @@
+syntax = "proto3";
+package proto;
+
+option go_package = ".";  // . 代表当前目录生成
+
+// 命令：protoc --go_out=plugins=grpc:. helloworld.proto
+
+// The greeting service definition.
+service Greeter {
+    // Sends a greeting
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+    string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+    string message = 1;
+}

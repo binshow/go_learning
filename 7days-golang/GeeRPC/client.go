@@ -181,7 +181,7 @@ func (client *Client) Go(serviceMethod string, args, reply interface{}, done cha
 	if done == nil {
 		done = make(chan *Call, 10)		// 不要设置为1貌似就ok了？
 	} else if cap(done) == 0 {
-		log.Panic("rpc client: done channel is unbuffered")
+		log.Panic("rpc client: done channel_demo is unbuffered")
 	}
 	call := &Call{
 		ServiceMethod: serviceMethod,
