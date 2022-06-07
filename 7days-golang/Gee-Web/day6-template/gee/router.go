@@ -1,14 +1,13 @@
 package gee
 
 import (
-	"fmt"
 	"net/http"
 	"strings"
 )
 
 type router struct {
-	roots    map[string]*node       //存储每种请求方式的 Trie树根节点
-	handlers map[string]HandlerFunc //存储每种请求方式的 HandlerFunc
+	roots    map[string]*node
+	handlers map[string]HandlerFunc
 }
 
 func newRouter() *router {
@@ -19,9 +18,9 @@ func newRouter() *router {
 }
 
 // Only one * is allowed
-// 解析路由
 func parsePattern(pattern string) []string {
 	vs := strings.Split(pattern, "/")
+
 	parts := make([]string, 0)
 	for _, item := range vs {
 		if item != "" {
@@ -34,35 +33,27 @@ func parsePattern(pattern string) []string {
 	return parts
 }
 
-// 添加路由的方式变成了插入前缀树的节点
 func (r *router) addRoute(method string, pattern string, handler HandlerFunc) {
-	parts := parsePattern(pattern) //
+	parts := parsePattern(pattern)
 
-	key := method + "-" + pattern //GET-/
-
-	// 用请求的方法来创建一个根节点
+	key := method + "-" + pattern
 	_, ok := r.roots[method]
 	if !ok {
 		r.roots[method] = &node{}
 	}
-	// 根节点下面继续插入
 	r.roots[method].insert(pattern, parts, 0)
 	r.handlers[key] = handler
 }
 
-// 根据路径查询路由
 func (r *router) getRoute(method string, path string) (*node, map[string]string) {
 	searchParts := parsePattern(path)
-	fmt.Println(searchParts)
-
 	params := make(map[string]string)
-	// 查询对应的方法有没有根节点
 	root, ok := r.roots[method]
+
 	if !ok {
 		return nil, nil
 	}
 
-	// 查询对应的路径数组有没有节点，返回的是 叶子节点
 	n := root.search(searchParts, 0)
 
 	if n != nil {
@@ -82,7 +73,6 @@ func (r *router) getRoute(method string, path string) (*node, map[string]string)
 	return nil, nil
 }
 
-// 根据方法查询路由
 func (r *router) getRoutes(method string) []*node {
 	root, ok := r.roots[method]
 	if !ok {
@@ -95,11 +85,15 @@ func (r *router) getRoutes(method string) []*node {
 
 func (r *router) handle(c *Context) {
 	n, params := r.getRoute(c.Method, c.Path)
+
 	if n != nil {
-		c.Params = params
 		key := c.Method + "-" + n.pattern
-		r.handlers[key](c) // 执行对应的handler
+		c.Params = params
+		c.handlers = append(c.handlers, r.handlers[key])
 	} else {
-		c.String(http.StatusNotFound, "404 NOT FOUND: %s\n", c.Path)
+		c.handlers = append(c.handlers, func(c *Context) {
+			c.String(http.StatusNotFound, "404 NOT FOUND: %s\n", c.Path)
+		})
 	}
+	c.Next()
 }

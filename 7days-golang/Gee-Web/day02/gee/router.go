@@ -6,7 +6,7 @@ import (
 )
 
 
-
+// 将路由相关的功能提取出来，方便扩展，比如动态路由等
 type router struct {
 	handlers map[string]HandlerFunc
 }

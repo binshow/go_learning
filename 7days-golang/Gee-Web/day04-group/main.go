@@ -1,7 +1,7 @@
 package main
 
 import (
-	gee2 "go_learning/7days-golang/Gee-Web/day04/gee"
+	gee2 "go_learning/7days-golang/Gee-Web/day04-group/gee"
 	"net/http"
 )
 
