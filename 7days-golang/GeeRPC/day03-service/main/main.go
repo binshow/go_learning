@@ -1,15 +1,34 @@
 package main
 
 import (
-	"fmt"
-	"go_learning/7days-golang/GeeRPC"
+	geerpc "go_learning/7days-golang/GeeRPC/day03-service"
 	"log"
 	"net"
 	"sync"
 	"time"
 )
 
+// -------------------------------------------
+// @file          : main.go
+// @author        : binshow
+// @time          : 2022/6/8 11:51 PM
+// @description   :
+// -------------------------------------------
+
+type Foo int
+
+type Args struct{ Num1, Num2 int }
+
+func (f Foo) Sum(args Args, reply *int) error {
+	*reply = args.Num1 + args.Num2
+	return nil
+}
+
 func startServer(addr chan string) {
+	var foo Foo
+	if err := geerpc.Register(&foo); err != nil {
+		log.Fatal("register error:", err)
+	}
 	// pick a free port
 	l, err := net.Listen("tcp", ":0")
 	if err != nil {
@@ -17,15 +36,16 @@ func startServer(addr chan string) {
 	}
 	log.Println("start rpc server on", l.Addr())
 	addr <- l.Addr().String()
-	GeeRPC.Accept(l)
+	geerpc.Accept(l)
 }
+
+
 
 func main() {
 	log.SetFlags(0)
 	addr := make(chan string)
 	go startServer(addr)
-
-	client, _ := GeeRPC.Dial("tcp", <-addr)
+	client, _ := geerpc.Dial("tcp", <-addr)
 	defer func() { _ = client.Close() }()
 
 	time.Sleep(time.Second)
@@ -35,14 +55,13 @@ func main() {
 		wg.Add(1)
 		go func(i int) {
 			defer wg.Done()
-			args := fmt.Sprintf("geerpc req %d", i)
-			var reply string
+			args := &Args{Num1: i, Num2: i * i}
+			var reply int
 			if err := client.Call("Foo.Sum", args, &reply); err != nil {
 				log.Fatal("call Foo.Sum error:", err)
 			}
-			log.Println("reply:", reply)
+			log.Printf("%d + %d = %d", args.Num1, args.Num2, reply)
 		}(i)
 	}
 	wg.Wait()
 }
-

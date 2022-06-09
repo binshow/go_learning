@@ -11,6 +11,7 @@ func main() {
 		c.HTML(http.StatusOK, "<h1>Index Page</h1>")
 	})
 
+	// 路由分组1
 	v1 := r.Group("/v1")
 	{
 		v1.GET("/", func(c *gee2.Context) {
@@ -22,6 +23,7 @@ func main() {
 			c.String(http.StatusOK, "hello %s, you're at %s\n", c.Query("name"), c.Path)
 		})
 	}
+
 	v2 := r.Group("/v2")
 	{
 		v2.GET("/hello/:name", func(c *gee2.Context) {

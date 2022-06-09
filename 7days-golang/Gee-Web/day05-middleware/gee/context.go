@@ -18,9 +18,10 @@ type Context struct {
 	Params map[string]string
 	// response info
 	StatusCode int
+
 	// middleware
 	handlers []HandlerFunc
-	index    int
+	index    int		// 记录当前执行到第几个 middleware
 }
 
 func newContext(w http.ResponseWriter, req *http.Request) *Context {
@@ -33,6 +34,7 @@ func newContext(w http.ResponseWriter, req *http.Request) *Context {
 	}
 }
 
+// Next 方法就是依次去执行后序的 middleware
 func (c *Context) Next() {
 	c.index++
 	s := len(c.handlers)

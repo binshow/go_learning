@@ -1,9 +1,9 @@
-package GeeRPC
+package day02_client
 
 import (
 	"encoding/json"
 	"fmt"
-	"go_learning/7days-golang/GeeRPC/codec"
+	"go_learning/7days-golang/GeeRPC/day01-codec/codec"
 	"io"
 	"log"
 	"net"
@@ -11,58 +11,77 @@ import (
 	"sync"
 )
 
-/**
-实现了一个简易的服务端
-目前来说，唯一需要协商的内容就是消息的编解码方式了。将这部分信息放入到结构体Option中承载
-*/
+// -------------------------------------------
+// @file          : server.go
+// @author        : binshow
+// @time          : 2022/6/8 11:51 PM
+// @description   : 服务端实现
+// -------------------------------------------
 
-const MagicNumber = 0x3bef5c // 魔数，代表这是一个 geeRpc的请求
 
-/**
-一般来说，涉及协议协商的这部分信息，需要设计固定的字节来传输的。
-但是为了实现上更简单，GeeRPC 客户端固定采用 JSON 编码 Option，
-后续的 header 和 body 的编码方式由 Option 中的 CodeType 指定，
-服务端首先使用 JSON 解码 Option，然后通过 Option 的 CodeType 解码剩余的内容
-*/
+// 服务端 和 客户端之间的通信是需要协商一些内容的，类似于 http header 中的 content-type 和 content-length 这些内容
+// 服务端通过解析请求header中的内容就知道如何从 body 中读取需要的信息
+// 在RPC的框架中，这些协商部分一般都是自定义设计的，为了提升性能
+
+// 为了实现简单：我们将 Option 使用固定的json编码
+//| Option{MagicNumber: xxx, CodecType: xxx} | Header{ServiceMethod ...} | Body interface{} |
+//| <------      固定 JSON 编码      ------>  | <-------   编码方式由 CodeType 决定   ------->|
+
+const MagicNumber = 0x3bef5c
 
 type Option struct {
-	MagicNumber int        // MagicNumber marks this's a geerpc request
-	CodecType   codec.Type // client may choose different Codec to encode body
+	MagicNumber int				// 表明这是GeeRPC 的 request
+	CodecType   codec.Type		// 表明 服务端需要选择哪个编码器来解码请求体中的内容
 }
 
-// DefaultOption 表示默认的协商内容
+// DefaultOption 提供一个默认实现
 var DefaultOption = &Option{
 	MagicNumber: MagicNumber,
 	CodecType:   codec.GobType,
 }
 
+
+
 // Server represents an RPC Server.
 type Server struct{}
 
-func NewServer() *Server {
-	return &Server{}
-}
+// NewServer returns a new Server.
+func NewServer() *Server {return &Server{}}
 
 // DefaultServer is the default instance of *Server.
 var DefaultServer = NewServer()
 
-// ServeConn 方法以单连接的方式运行服务，这个方法会一直阻塞直到客户端断开连接
-func (server *Server) ServeConn(conn io.ReadWriteCloser) {
-	defer func() { _ = conn.Close() }()
+// Accept accepts connections on the listener and serves requests
+// for each incoming connection.
+func (server *Server) Accept(lis net.Listener) {
+	for {
+		conn, err := lis.Accept()
+		if err != nil {
+			log.Println("rpc server: accept error:", err)
+			return
+		}
+		go server.ServeConn(conn)
+	}
+}
 
-	// 反序列化得到 Option 实例
+// Accept accepts connections on the listener and serves requests
+// for each incoming connection.
+func Accept(lis net.Listener) { DefaultServer.Accept(lis) }
+
+
+// ServeConn runs the server on a single connection.
+// ServeConn blocks, serving the connection until the client hangs up.
+func (server *Server) ServeConn(conn io.ReadWriteCloser) {
+	defer conn.Close()
 	var opt Option
 	if err := json.NewDecoder(conn).Decode(&opt); err != nil {
 		log.Println("rpc server: options error: ", err)
 		return
 	}
-	// 校验魔数
 	if opt.MagicNumber != MagicNumber {
 		log.Printf("rpc server: invalid magic number %x", opt.MagicNumber)
 		return
 	}
-
-	// f为对应的构造函数
 	f := codec.NewCodecFuncMap[opt.CodecType]
 	if f == nil {
 		log.Printf("rpc server: invalid codec type %s", opt.CodecType)
@@ -77,29 +96,25 @@ var invalidRequest = struct{}{}
 func (server *Server) serveCodec(cc codec.Codec) {
 	sending := new(sync.Mutex) // make sure to send a complete response
 	wg := new(sync.WaitGroup)  // wait until all request are handled
-
-	// 在一次请求中，允许接受多个请求，因此这里使用for循环无限制的等待请求的到来，直到发生错误
+	// 在一次连接中，允许接收多个请求，所以会用for循环一直读取
 	for {
-		// 读取请求
+		// 处理请求是并发的，但是回复请求的报文必须是逐个发送的，并发容易导致多个回复报文交织在一起，客户端无法解析。在这里使用锁(sending)保证
 		req, err := server.readRequest(cc)
 		if err != nil {
-			// 只有在解析请求失败时才会终止循环
 			if req == nil {
 				break // it's not possible to recover, so close the connection
 			}
 			req.h.Error = err.Error()
-			// 发送响应其实是逐个发送的，并发发送会导致多个response交织在一起导致客户端无法解析，这里使用锁来保证逐个发送的
 			server.sendResponse(cc, req.h, invalidRequest, sending)
 			continue
 		}
 		wg.Add(1)
-		// 使用goroutine并发处理请求
-		go server.handleRequest(cc, req, sending, wg)
+		go server.handleRequest(cc, req, sending, wg) // 处理请求
 	}
-
 	wg.Wait()
 	_ = cc.Close()
 }
+
 
 // request stores all information of a call
 type request struct {
@@ -107,6 +122,7 @@ type request struct {
 	argv, replyv reflect.Value // argv and replyv of request
 }
 
+//解析请求header
 func (server *Server) readRequestHeader(cc codec.Codec) (*codec.Header, error) {
 	var h codec.Header
 	if err := cc.ReadHeader(&h); err != nil {
@@ -118,6 +134,7 @@ func (server *Server) readRequestHeader(cc codec.Codec) (*codec.Header, error) {
 	return &h, nil
 }
 
+//解析请求
 func (server *Server) readRequest(cc codec.Codec) (*request, error) {
 	h, err := server.readRequestHeader(cc)
 	if err != nil {
@@ -127,6 +144,7 @@ func (server *Server) readRequest(cc codec.Codec) (*request, error) {
 	// TODO: now we don't know the type of request argv
 	// day 1, just suppose it's string
 	req.argv = reflect.New(reflect.TypeOf(""))
+	// 解码 body
 	if err = cc.ReadBody(req.argv.Interface()); err != nil {
 		log.Println("rpc server: read argv err:", err)
 	}
@@ -150,20 +168,4 @@ func (server *Server) handleRequest(cc codec.Codec, req *request, sending *sync.
 	server.sendResponse(cc, req.h, req.replyv.Interface(), sending)
 }
 
-// Accept accepts connections on the listener and serves requests for each incoming connection.
-func (server *Server) Accept(lis net.Listener) {
-	for {
-		conn, err := lis.Accept()
-		if err != nil {
-			log.Println("rpc server: accept error:", err)
-			return
-		}
-		// 对每一个Connection，都开一个goroutine并发的处理
-		go server.ServeConn(conn)
-	}
-}
 
-// Accept accepts connections on the listener and serves requests for each incoming connection.
-func Accept(lis net.Listener) {
-	DefaultServer.Accept(lis)
-}

@@ -1,45 +1,11 @@
 package main
 
-/*
-(1) render array
-$ curl http://localhost:9999/date
-<html>
-<body>
-    <p>hello, gee</p>
-    <p>Date: 2019-08-17</p>
-</body>
-</html>
-*/
-
-/*
-(2) custom render function
-$ curl http://localhost:9999/students
-<html>
-<body>
-    <p>hello, gee</p>
-    <p>0: Geektutu is 20 years old</p>
-    <p>1: Jack is 22 years old</p>
-</body>
-</html>
-*/
-
-/*
-(3) serve static files
-$ curl http://localhost:9999/assets/css/geektutu.css
-p {
-    color: orange;
-    font-weight: 700;
-    font-size: 20px;
-}
-*/
-
 import (
 	"fmt"
+	"gee"
 	"html/template"
 	"net/http"
 	"time"
-
-	"gee"
 )
 
 type student struct {

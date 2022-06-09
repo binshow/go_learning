@@ -59,9 +59,10 @@ func TestGetUser(t *testing.T) {
 func TestSayHello(t *testing.T) {
 	client := GetClient()
 
+	var address string = "address"
 	user := &Sample.User{}
 	user.Name = "thrift"
-	user.Address = "address"
+	user.Address = &address
 
 	rep, err := client.SayHello(ctx, user)
 	if err != nil {
