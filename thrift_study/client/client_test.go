@@ -13,6 +13,7 @@ var ctx = context.Background()
 
 func GetClient() *Sample.GreeterClient {
 	addr := ":9090"
+	// 创建一个 TSocket
 	var transport thrift.TTransport
 	var err error
 	transport, err = thrift.NewTSocket(addr)

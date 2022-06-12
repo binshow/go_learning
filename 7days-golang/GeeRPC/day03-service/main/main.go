@@ -1,7 +1,8 @@
 package main
 
 import (
-	geerpc "go_learning/7days-golang/GeeRPC/day03-service"
+	geerpc "go_learning/7days-golang/GeeRPC/day03-service/client"
+	"go_learning/7days-golang/GeeRPC/day03-service/server"
 	"log"
 	"net"
 	"sync"
@@ -26,7 +27,8 @@ func (f Foo) Sum(args Args, reply *int) error {
 
 func startServer(addr chan string) {
 	var foo Foo
-	if err := geerpc.Register(&foo); err != nil {
+	// 注册Foo这个struct，注册成服务端的一个服务 ，可以参考 thrift 也是这么实现的
+	if err := server.Register(&foo); err != nil {
 		log.Fatal("register error:", err)
 	}
 	// pick a free port
@@ -36,7 +38,7 @@ func startServer(addr chan string) {
 	}
 	log.Println("start rpc server on", l.Addr())
 	addr <- l.Addr().String()
-	geerpc.Accept(l)
+	server.Accept(l)
 }
 
 
@@ -44,6 +46,7 @@ func startServer(addr chan string) {
 func main() {
 	log.SetFlags(0)
 	addr := make(chan string)
+	//startServer(addr)
 	go startServer(addr)
 	client, _ := geerpc.Dial("tcp", <-addr)
 	defer func() { _ = client.Close() }()

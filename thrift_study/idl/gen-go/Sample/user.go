@@ -26,8 +26,8 @@ func DataPtr(v Data) *Data { return &v }
 //  - Name
 //  - Address
 type User struct {
-  ID int32 `thrift:"id,1,required" db:"id" json:"id"`
-  Name string `thrift:"name,2,required" db:"name" json:"name"`
+  ID int32        `thrift:"id,1,required" db:"id" json:"id"`
+  Name string     `thrift:"name,2,required" db:"name" json:"name"`
   Address *string `thrift:"address,3" db:"address" json:"address,omitempty"`
 }
 
@@ -43,6 +43,8 @@ func (p *User) GetID() int32 {
 func (p *User) GetName() string {
   return p.Name
 }
+
+// Address  是一个 option 字段
 var User_Address_DEFAULT string
 func (p *User) GetAddress() string {
   if !p.IsSetAddress() {
@@ -523,10 +525,12 @@ func (p *GreeterClient) GetUser(ctx context.Context, uid int32) (_r *Response, _
   return nil, thrift.NewTApplicationException(thrift.MISSING_RESULT, "GetUser failed: unknown result")
 }
 
+// 自定义实现的 Processer， 实现 了 TProcessor 接口
 type GreeterProcessor struct {
-  processorMap map[string]thrift.TProcessorFunction
-  handler Greeter
+  processorMap map[string]thrift.TProcessorFunction     // 保存了 function name 和 对应的 TProcessorFunction
+  handler Greeter                                       // Greeter 接口
 }
+var  _ thrift.TProcessor = (*GreeterProcessor)(nil)
 
 func (p *GreeterProcessor) AddToProcessorMap(key string, processor thrift.TProcessorFunction) {
   p.processorMap[key] = processor
@@ -550,13 +554,19 @@ return self11
 }
 
 func (p *GreeterProcessor) Process(ctx context.Context, iprot, oprot thrift.TProtocol) (success bool, err thrift.TException) {
+ // 通过 TProtocol 对象读取消息的 seq 和 需要调用的服务func
   name, _, seqId, err2 := iprot.ReadMessageBegin(ctx)
   if err2 != nil { return false, thrift.WrapTException(err2) }
+
+  // 如果这个 func 存在，就直接调用 对应的 func 去处理这个请求接口
   if processor, ok := p.GetProcessorFunction(name); ok {
     return processor.Process(ctx, seqId, iprot, oprot)
   }
+
   iprot.Skip(ctx, thrift.STRUCT)
   iprot.ReadMessageEnd(ctx)
+
+  // 说明要调用的 func 并不存在，写入 这个 异常
   x12 := thrift.NewTApplicationException(thrift.UNKNOWN_METHOD, "Unknown function " + name)
   oprot.WriteMessageBegin(ctx, name, thrift.EXCEPTION, seqId)
   x12.Write(ctx, oprot)
@@ -566,13 +576,16 @@ func (p *GreeterProcessor) Process(ctx context.Context, iprot, oprot thrift.TPro
 
 }
 
+// 如果调用的是 SayHello 这个方法
 type greeterProcessorSayHello struct {
   handler Greeter
 }
+var  _ thrift.TProcessorFunction = (*greeterProcessorSayHello)(nil)
 
 func (p *greeterProcessorSayHello) Process(ctx context.Context, seqId int32, iprot, oprot thrift.TProtocol) (success bool, err thrift.TException) {
   args := GreeterSayHelloArgs{}
   var err2 error
+  // args.Read(ctx, iprot) 设置 args 这个请求参数 ，如果读取请求参数失败了，就说明有 PROTOCOL_ERROR 错误了
   if err2 = args.Read(ctx, iprot); err2 != nil {
     iprot.ReadMessageEnd(ctx)
     x := thrift.NewTApplicationException(thrift.PROTOCOL_ERROR, err2.Error())
@@ -594,7 +607,7 @@ func (p *greeterProcessorSayHello) Process(ctx context.Context, seqId int32, ipr
     tickerCtx, tickerCancel = context.WithCancel(context.Background())
     defer tickerCancel()
     go func(ctx context.Context, cancel context.CancelFunc) {
-      ticker := time.NewTicker(thrift.ServerConnectivityCheckInterval)
+      ticker := time.NewTicker(thrift.ServerConnectivityCheckInterval)  // 每 5 微秒 检查一次 连接是否还在建立
       defer ticker.Stop()
       for {
         select {
@@ -602,7 +615,7 @@ func (p *greeterProcessorSayHello) Process(ctx context.Context, seqId int32, ipr
           return
         case <-ticker.C:
           if !iprot.Transport().IsOpen() {
-            cancel()
+            cancel()    // 如果连接没有建立了，就调用 cancel func 取消当前的上下文
             return
           }
         }
@@ -612,6 +625,7 @@ func (p *greeterProcessorSayHello) Process(ctx context.Context, seqId int32, ipr
 
   result := GreeterSayHelloResult{}
   var retval *Response
+  // 实际调用目标方法，如果出现问题了，说明就服务端内部的问题了
   if retval, err2 = p.handler.SayHello(ctx, args.User); err2 != nil {
     tickerCancel()
     if err2 == thrift.ErrAbandonRequest {
@@ -626,6 +640,8 @@ func (p *greeterProcessorSayHello) Process(ctx context.Context, seqId int32, ipr
   } else {
     result.Success = retval
   }
+
+  // 代码到这 说明 处理这个请求以及结束了，而且没有问题，在这里写入 reply
   tickerCancel()
   if err2 = oprot.WriteMessageBegin(ctx, "SayHello", thrift.REPLY, seqId); err2 != nil {
     err = thrift.WrapTException(err2)

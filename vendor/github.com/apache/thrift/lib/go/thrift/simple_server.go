@@ -58,11 +58,11 @@ type TSimpleServer struct {
 	wg     sync.WaitGroup
 	mu     sync.Mutex
 
-	processorFactory       TProcessorFactory	// 处理层
-	serverTransport        TServerTransport		// 服务层
-	inputTransportFactory  TTransportFactory	// 传输层：又分为输入传输和输出传输
+	processorFactory       TProcessorFactory
+	serverTransport        TServerTransport
+	inputTransportFactory  TTransportFactory
 	outputTransportFactory TTransportFactory
-	inputProtocolFactory   TProtocolFactory		// 协议层：又分为输入协议和输出协议
+	inputProtocolFactory   TProtocolFactory
 	outputProtocolFactory  TProtocolFactory
 
 	// Headers to auto forward in THeaderProtocol
@@ -181,7 +181,6 @@ func (p *TSimpleServer) SetLogger(logger Logger) {
 }
 
 func (p *TSimpleServer) innerAccept() (int32, error) {
-	// 服务层 Accept 等待客户端连接
 	client, err := p.serverTransport.Accept()
 	p.mu.Lock()
 	defer p.mu.Unlock()
@@ -192,7 +191,6 @@ func (p *TSimpleServer) innerAccept() (int32, error) {
 	if err != nil {
 		return 0, err
 	}
-	// 开 goroutine 去处理请求
 	if client != nil {
 		p.wg.Add(1)
 		go func() {
@@ -224,7 +222,6 @@ func (p *TSimpleServer) Serve() error {
 	if err != nil {
 		return err
 	}
-
 	p.AcceptLoop()
 	return nil
 }
@@ -265,9 +262,7 @@ func (p *TSimpleServer) processRequests(client TTransport) (err error) {
 		err = treatEOFErrorsAsNil(err)
 	}()
 
-	// 拿到对应的process
 	processor := p.processorFactory.GetProcessor(client)
-	
 	inputTransport, err := p.inputTransportFactory.GetTransport(client)
 	if err != nil {
 		return err
@@ -321,8 +316,7 @@ func (p *TSimpleServer) processRequests(client TTransport) (err error) {
 			ctx = AddReadTHeaderToContext(ctx, headerProtocol.GetReadHeaders())
 			ctx = SetWriteHeaderList(ctx, p.forwardHeaders)
 		}
-		
-		// 实际处理过程
+
 		ok, err := processor.Process(ctx, inputProtocol, outputProtocol)
 		if errors.Is(err, ErrAbandonRequest) {
 			return client.Close()

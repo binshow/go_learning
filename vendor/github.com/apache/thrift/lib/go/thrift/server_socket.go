@@ -52,7 +52,6 @@ func NewTServerSocketFromAddrTimeout(addr net.Addr, clientTimeout time.Duration)
 	return &TServerSocket{addr: addr, clientTimeout: clientTimeout}
 }
 
-// 设置 TServerSocket 的 net.Listener
 func (p *TServerSocket) Listen() error {
 	p.mu.Lock()
 	defer p.mu.Unlock()

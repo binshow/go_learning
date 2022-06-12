@@ -6,14 +6,14 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"math"
+    "go_learning/thrift_study/idl/gen-go/Sample"
+    "math"
 	"net"
 	"net/url"
 	"os"
 	"strconv"
 	"strings"
 	thrift "github.com/apache/thrift/lib/go/thrift"
-	"Sample"
 )
 
 var _ = Sample.GoUnusedProtection__
