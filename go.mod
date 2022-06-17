@@ -9,6 +9,7 @@ require (
 	github.com/hpcloud/tail v1.0.0
 	github.com/lucasepe/codename v0.2.0
 	github.com/mailru/easyjson v0.7.7
+	github.com/mattn/go-sqlite3 v1.14.13
 	github.com/olivere/elastic/v7 v7.0.30
 	github.com/smallnest/rpcx v1.7.4
 	google.golang.org/grpc v1.46.0

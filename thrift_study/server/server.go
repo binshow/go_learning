@@ -37,6 +37,7 @@ func (this *GreeterService) GetUser(ctx context.Context, uid int32) (r *Sample.R
 
 
 /**
+
 	thrift 中分层如下：
 	1. 传输层 transport layer : 负责从网络中读取和写入数据，定义了具体的网络传输协议比如tcp 等
 	2. 协议层 protocol layer  : 定义了数据传输的格式，负责网络传输数据的序列化方式，比如 json、xml、二进制等
