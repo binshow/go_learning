@@ -5,78 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d8910a1-58a2-49ee-9df1-428076b6027f" name="Changes" comment="add es">
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/clause/clause.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/clause/clause_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/clause/generator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/day01-database-sql/gee.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/day01-database-sql/geeorm.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/day01-database-sql/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/day01-database-sql/sqlite3.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/dialect/dialect.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/dialect/sqlite3.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/gee.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/log/log.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/log/log_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/schema/schema.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/schema/schema_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/session/raw.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/session/raw_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/session/record.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/session/record_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/session/table.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/7days-golang/GeeORM/session/table_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gee.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/identifier.sqlite" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/.codecov.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/backup.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/callback.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/convert.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/doc.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/error.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3-binding.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3-binding.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_context.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_func_crypt.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_go18.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_libsqlite3.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_load_extension.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_load_extension_omit.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_allow_uri_authority.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_app_armor.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_column_metadata.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_foreign_keys.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_fts5.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_icu.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_introspect.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_preupdate.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_preupdate_hook.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_preupdate_omit.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_secure_delete.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_secure_delete_fast.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_stat4.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_unlock_notify.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_unlock_notify.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_userauth.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_userauth_omit.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_vacuum_full.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_vacuum_incr.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_vtable.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_other.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_solaris.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_trace.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_type.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_usleep_windows.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_windows.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3ext.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/static_mock.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02Go_Basic/slice-study/slice_practice.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02Go_Basic/slice-study/slice_practice_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02Go_Basic/slice-study/slice_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/02Go_Basic/string_study/string_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_study/mysql_study/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database_study/mysql_study/mysql.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pprof-study/first-use/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/AUTHORS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/CHANGELOG.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/buffer.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/collations.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/conncheck.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/conncheck_dummy.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/connection.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/connector.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/const.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/driver.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/dsn.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/errors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/fields.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/fuzz.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/infile.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/nulltime.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/nulltime_go113.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/nulltime_legacy.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/packets.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/result.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/rows.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/statement.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/transaction.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/github.com/go-sql-driver/mysql/utils.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/7days-golang/GeeORM/day01-database-sql/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/7days-golang/GeeORM/day01-database-sql/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gee.db" beforeDir="false" afterPath="$PROJECT_DIR$/gee.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thrift_study/server/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/thrift_study/server/server.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/modules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/modules.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +136,7 @@
       <recent name="$PROJECT_DIR$/7days-golang/GeeRPC/day03-service/client" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestSession_Find in go_learning/7days-golang/GeeORM/session">
+  <component name="RunManager" selected="Go Test.TestQuest1 in go_learning/02Go_Basic/slice-study">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
@@ -178,61 +146,58 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/7days-golang/GeeORM/day01-database-sql" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/database_study/mysql_study" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/7days-golang/GeeORM/day01-database-sql" />
+      <package value="go_learning/database_study/mysql_study" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/7days-golang/GeeORM/day01-database-sql/main.go" />
+      <filePath value="$PROJECT_DIR$/database_study/mysql_study/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="TestClause_Build in go_learning/7days-golang/GeeORM/clause" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/pprof-study/first-use" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
-      <working_directory value="$PROJECT_DIR$/7days-golang/GeeORM/clause" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_learning/pprof-study/first-use" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/pprof-study/first-use/main.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestLastByCopy in go_learning/02Go_Basic/slice-study" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_learning" />
+      <working_directory value="$PROJECT_DIR$/02Go_Basic/slice-study" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/7days-golang/GeeORM/clause" />
+      <package value="go_learning/02Go_Basic/slice-study" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestClause_Build\E$" />
+      <pattern value="^\QTestLastByCopy\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestClause_Set in go_learning/7days-golang/GeeORM/clause" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestLastBySlice in go_learning/02Go_Basic/slice-study" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
-      <working_directory value="$PROJECT_DIR$/7days-golang/GeeORM/clause" />
+      <working_directory value="$PROJECT_DIR$/02Go_Basic/slice-study" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/7days-golang/GeeORM/clause" />
+      <package value="go_learning/02Go_Basic/slice-study" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestClause_Set\E$" />
+      <pattern value="^\QTestLastBySlice\E$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestSession_Find in go_learning/7days-golang/GeeORM/session" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestQuest1 in go_learning/02Go_Basic/slice-study" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
-      <working_directory value="$PROJECT_DIR$/7days-golang/GeeORM/session" />
+      <working_directory value="$PROJECT_DIR$/02Go_Basic/slice-study" />
       <root_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/7days-golang/GeeORM/session" />
+      <package value="go_learning/02Go_Basic/slice-study" />
       <directory value="$PROJECT_DIR$" />
       <filePath value="$PROJECT_DIR$" />
       <framework value="gotest" />
-      <pattern value="^\QTestSession_Find\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestSession_Insert in go_learning/7days-golang/GeeORM/session" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_learning" />
-      <working_directory value="$PROJECT_DIR$/7days-golang/GeeORM/session" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_learning/7days-golang/GeeORM/session" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestSession_Insert\E$" />
+      <pattern value="^\QTestQuest1\E$" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
@@ -247,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestSession_Find in go_learning/7days-golang/GeeORM/session" />
-        <item itemvalue="Go Test.TestSession_Insert in go_learning/7days-golang/GeeORM/session" />
-        <item itemvalue="Go Test.TestClause_Build in go_learning/7days-golang/GeeORM/clause" />
-        <item itemvalue="Go Test.TestClause_Set in go_learning/7days-golang/GeeORM/clause" />
-        <item itemvalue="Go Build.go build go_learning/7days-golang/GeeORM/day01-database-sql" />
+        <item itemvalue="Go Test.TestQuest1 in go_learning/02Go_Basic/slice-study" />
+        <item itemvalue="Go Build.go build go_learning/pprof-study/first-use" />
+        <item itemvalue="Go Test.TestLastBySlice in go_learning/02Go_Basic/slice-study" />
+        <item itemvalue="Go Test.TestLastByCopy in go_learning/02Go_Basic/slice-study" />
+        <item itemvalue="Go Build.go build go_learning/database_study/mysql_study" />
       </list>
     </recent_temporary>
   </component>

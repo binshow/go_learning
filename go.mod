@@ -5,6 +5,7 @@ go 1.17
 require (
 	github.com/Shopify/sarama v1.30.1
 	github.com/apache/thrift v0.16.0
+	github.com/go-sql-driver/mysql v1.6.0
 	github.com/hashicorp/go-uuid v1.0.2
 	github.com/hpcloud/tail v1.0.0
 	github.com/lucasepe/codename v0.2.0
