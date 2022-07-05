@@ -2,7 +2,6 @@ syntax = "proto3";
 package proto;
 
 option go_package = ".";  // . 代表当前目录生成
-
 // 命令：protoc --go_out=plugins=grpc:. helloworld.proto
 
 // The greeting service definition.

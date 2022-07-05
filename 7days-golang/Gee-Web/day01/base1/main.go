@@ -11,8 +11,9 @@ func main() {
 	http.HandleFunc("/" , indexHandler)
 	http.HandleFunc("/hello" , helloHandler)
 
-	//2. 启动并监听端口， 第二个参数传入的是一个handler
-	// ListenAndServe 会一直阻塞，直到发生error
+	//2. 启动并监听端口， 第二个参数传入的是一个handler,
+	//	 handler is a interface,如果传入的是实现了handler的实例，那么所有的http请求都会交给这个实例去处理
+	//3. ListenAndServe 会一直阻塞，直到发生error
 	log.Fatal(http.ListenAndServe(":9999" , nil))
 
 }
