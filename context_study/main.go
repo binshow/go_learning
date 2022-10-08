@@ -3,41 +3,53 @@ package main
 import (
 	"context"
 	"fmt"
-	"runtime"
 	"time"
 )
 
-const timeout = 3
+// -------------------------------------------
+// @file          : main.go
+// @author        : binshow
+// @time          : 2022/8/1 10:14 AM
+// @description   : context 包的用法
+// -------------------------------------------
 
-func main() {
-	//DoHttpHandler()
+func testContextTimeout() {
 
-	runtime.GOMAXPROCS(1)
-	fmt.Println("hello")
+	// 设置 context 的过期时间
+	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
+	defer cancel()
+
+	// 设置 goroutine 的处理时间
+	go handle(ctx , 5000 * time.Millisecond)
+
+	select {
+	case <-ctx.Done():
+		fmt.Println("main" , ctx.Err())
+	}
+
 }
 
-func DoHttpHandler() {
-	// 创建一个超时时间为3秒的上下文
-	ctx, cancelFunc := context.WithTimeout(context.Background(), timeout*time.Second)
-	defer cancelFunc()
-	handler(ctx , cancelFunc) // 执行对应逻辑, handler 函数最多只能执行 3秒
-}
-
-func handler(ctx context.Context, cancelFunc context.CancelFunc) {
-	for i := 0; i < 10; i++ {
-		time.Sleep( 1 * time.Second)
-		select {
-		case <- ctx.Done():
-			fmt.Println(ctx.Err())
-			return
-		default:
-			fmt.Printf("deal time is %d\n", i)
-			cancelFunc() // 手动结束
-		}
+func handle(ctx context.Context, duration time.Duration) {
+	select {
+	case <-ctx.Done():
+		fmt.Println("handle"  , ctx.Err())
+	case <-time.After(duration):
+		fmt.Println("process request with", duration)
 	}
 }
 
 
+// 测试 取消信号的上下文
+func testContextCancel() {
+	ctx, cancel := context.WithCancel(context.Background())
+	go handle(ctx , time.Second * 1)
+
+	time.Sleep(time.Millisecond * 5000)
+	cancel()
+}
 
 
-
+func main() {
+	//testContextTimeout()
+	testContextCancel()
+}

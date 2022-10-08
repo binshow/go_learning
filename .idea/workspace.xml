@@ -5,21 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4d8910a1-58a2-49ee-9df1-428076b6027f" name="Changes" comment="add es">
-      <change afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day01/v1/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error_study/demo01/error_string.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/error_study/demo01/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go-code-practice/01-main-build/main_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-study/Context.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-study/http_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-study/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-study/map_based_handler.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-study/server.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01_go_design_and_implementation/chapter_3_data_structer/slice_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/01_go_design_and_implementation/go语言设计与实现.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/context_study/demo01/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/go-redis/demo01/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protobuf_入门/demo01/example/test.pb.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protobuf_入门/demo01/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protobuf_入门/demo01/person.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protobuf_入门/demo01/test.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protobuf_入门/protobuf.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/设计模式学习/02-创建型模式/7-为什么需要工厂模式.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/设计模式学习/02-创建型模式/工厂方法模式/9-工厂方法模式.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/设计模式学习/02-创建型模式/简单工厂模式/8-简单工厂模式.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/7days-golang/Gee-Web/day01/base1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/7days-golang/Gee-Web/day01/base1/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter10_log/demo01/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chapter10_log/demo02/main.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/concurrency/waitgroup_demo/demo01/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/concurrency/waitgroup_demo/demo01/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gRpc_study/proto/helloworld.proto" beforeDir="false" afterPath="$PROJECT_DIR$/gRpc_study/proto/helloworld.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/context_study/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/context_study/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net_study/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/net_study/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,20 +52,23 @@
     <option name="indexEntireGoPath" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file:///opt/homebrew/Cellar/go/1.17.5/libexec/src/syscall/zerrors_darwin_arm64.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/go.mod" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/sdk/go1.17.2/src/net/http/server.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/gRpc_study/proto/helloworld.pb.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/gRpc_study/server/main.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/go.mod" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/gRpc_study/client/main.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///opt/homebrew/Cellar/go/1.17.5/libexec/src/runtime/proc.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/gRpc_study/server/main.go" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/05-GoSDK-study/os_study/main.go" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///opt/homebrew/Cellar/go/1.17.5/libexec/src/runtime/proc.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/go.sum" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file:///opt/homebrew/Cellar/go/1.17.5/libexec/src/os/stat_darwin.go" root0="SKIP_INSPECTION" />
+    <setting file="file:///opt/homebrew/Cellar/go/1.17.5/libexec/src/os/stat_unix.go" root0="SKIP_INSPECTION" />
+    <setting file="file://$USER_HOME$/sdk/go1.17.2/src/net/net.go" root0="SKIP_INSPECTION" />
     <setting file="file:///opt/homebrew/Cellar/go/1.17.5/libexec/src/os/stat.go" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/chapter12/05tail_demo/main.go" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file:///opt/homebrew/Cellar/go/1.17.5/libexec/src/os/stat_unix.go" root0="SKIP_INSPECTION" />
-    <setting file="file:///opt/homebrew/Cellar/go/1.17.5/libexec/src/syscall/zerrors_darwin_arm64.go" root0="SKIP_INSPECTION" />
-    <setting file="file:///opt/homebrew/Cellar/go/1.17.5/libexec/src/os/stat_darwin.go" root0="SKIP_INSPECTION" />
-    <setting file="file://$USER_HOME$/sdk/go1.17.2/src/net/net.go" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="22Q2fgLfMt76ruqUsHoQrObKSwn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -85,31 +88,32 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.format.on.save.advertiser.fired" value="true" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/7days-golang/GeeORM" />
-    <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="go.sdk" />
+    <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/protobuf入门/demo01" />
       <recent name="$PROJECT_DIR$/7days-golang/GeeORM" />
       <recent name="$PROJECT_DIR$/7days-golang/GeeORM/session" />
       <recent name="$PROJECT_DIR$/7days-golang/GeeORM/log" />
       <recent name="$PROJECT_DIR$/7days-golang/GeeRPC/day07-register/xclient" />
-      <recent name="$PROJECT_DIR$/7days-golang/GeeRPC" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/设计模式学习/02-创建型模式/简单工厂模式" />
+      <recent name="$PROJECT_DIR$/context_study/demo01" />
       <recent name="$PROJECT_DIR$/7days-golang/GeeORM/session" />
       <recent name="$PROJECT_DIR$/rpcx_study/demo01" />
       <recent name="$PROJECT_DIR$/7days-golang/GeeRPC/day05-http-debug/server" />
-      <recent name="$PROJECT_DIR$/7days-golang/GeeRPC/day06-load-balance" />
-      <recent name="$PROJECT_DIR$/7days-golang/GeeRPC/day03-service/client" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestMain04 in go_learning/go-code-practice/01-main-build">
+  <component name="RunManager" selected="Go Build.go build go_learning/设计模式学习/02-创建型模式">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
@@ -119,49 +123,31 @@
       <filePath value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go_learning/chapter10_log/demo02" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/设计模式学习/02-创建型模式" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/chapter10_log/demo02" />
+      <package value="go_learning/设计模式学习/02-创建型模式" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/chapter10_log/demo02/main.go" />
+      <filePath value="$PROJECT_DIR$/设计模式学习/02-创建型模式/7-为什么需要工厂模式.go" />
       <method v="2" />
     </configuration>
-    <configuration name="TestMain01 in go_learning/go-code-practice/01-main-build" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/context_study" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
-      <working_directory value="$PROJECT_DIR$/go-code-practice/01-main-build" />
-      <root_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/go-code-practice/01-main-build" />
+      <package value="go_learning/context_study" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestMain01\E$" />
+      <filePath value="$PROJECT_DIR$/context_study/main.go" />
       <method v="2" />
     </configuration>
-    <configuration name="TestMain02 in go_learning/go-code-practice/01-main-build" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="go build go_learning/context_study/demo01" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go_learning" />
-      <working_directory value="$PROJECT_DIR$/go-code-practice/01-main-build" />
-      <root_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <package value="go_learning/go-code-practice/01-main-build" />
+      <package value="go_learning/context_study/demo01" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestMain02\E$" />
-      <method v="2" />
-    </configuration>
-    <configuration name="TestMain03 in go_learning/go-code-practice/01-main-build" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="go_learning" />
-      <working_directory value="$PROJECT_DIR$/go-code-practice/01-main-build" />
-      <root_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <package value="go_learning/go-code-practice/01-main-build" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
-      <pattern value="^\QTestMain03\E$" />
+      <filePath value="$PROJECT_DIR$/context_study/demo01/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="TestMain04 in go_learning/go-code-practice/01-main-build" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
@@ -176,6 +162,18 @@
       <pattern value="^\QTestMain04\E$" />
       <method v="2" />
     </configuration>
+    <configuration name="TestNewSlice in go_learning/01_go_design_and_implementation/chapter_3_data_structer" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="go_learning" />
+      <working_directory value="$PROJECT_DIR$/01_go_design_and_implementation/chapter_3_data_structer" />
+      <root_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="go_learning/01_go_design_and_implementation/chapter_3_data_structer" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <pattern value="^\QTestNewSlice\E$" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
       <module name="go_learning" />
       <working_directory value="$PROJECT_DIR$" />
@@ -186,13 +184,20 @@
       <framework value="gotest" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Go Build.go build go_learning/context_study/demo01" />
+      <item itemvalue="Go Build.go build go_learning/context_study" />
+      <item itemvalue="Go Test.TestMain04 in go_learning/go-code-practice/01-main-build" />
+      <item itemvalue="Go Test.TestNewSlice in go_learning/01_go_design_and_implementation/chapter_3_data_structer" />
+      <item itemvalue="Go Build.go build go_learning/设计模式学习/02-创建型模式" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build go_learning/设计模式学习/02-创建型模式" />
+        <item itemvalue="Go Build.go build go_learning/context_study" />
+        <item itemvalue="Go Build.go build go_learning/context_study/demo01" />
+        <item itemvalue="Go Test.TestNewSlice in go_learning/01_go_design_and_implementation/chapter_3_data_structer" />
         <item itemvalue="Go Test.TestMain04 in go_learning/go-code-practice/01-main-build" />
-        <item itemvalue="Go Test.TestMain03 in go_learning/go-code-practice/01-main-build" />
-        <item itemvalue="Go Test.TestMain02 in go_learning/go-code-practice/01-main-build" />
-        <item itemvalue="Go Test.TestMain01 in go_learning/go-code-practice/01-main-build" />
-        <item itemvalue="Go Build.go build go_learning/chapter10_log/demo02" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +215,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

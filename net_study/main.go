@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"net"
+	"net/http"
 )
-
 
 // go net 包基本原理演示：看起来就是一个同步模型，Accept、Read 和 Write 都会将当前协程给“阻塞”掉。
 // 比如 Read 函数这里，如果服务器调用时客户端数据还没有到达，
@@ -13,7 +13,7 @@ import (
 func main() {
 	//1. 根据协议名称和地址创建一个 Listener
 	listener, _ := net.Listen("tcp", "127.0.0.1:8089")
-	for  {
+	for {
 		//2. 调用 listener 的 Accept方法等待客户端的连接进来
 		// Accept 会阻塞
 		conn, _ := listener.Accept()
@@ -21,6 +21,8 @@ func main() {
 		//3. 如果有连接进来，就开启一个 goroutine 去处理这个连接
 		go process(conn)
 	}
+
+	http.ListenAndServe()
 
 }
 
@@ -31,10 +33,10 @@ func process(conn net.Conn) {
 	//读取连接上的数据
 	var buf [1024]byte
 
-	len, err := conn.Read(buf[:])	// Read 会阻塞
+	len, err := conn.Read(buf[:]) // Read 会阻塞
 
 	//发送数据
 	_, err = conn.Write([]byte("I am server!")) // Write 会阻塞
-	fmt.Println(len , err)
+	fmt.Println(len, err)
 }
 

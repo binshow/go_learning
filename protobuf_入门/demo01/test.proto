@@ -1,0 +1,14 @@
+syntax = "proto3"; // 语法声明
+
+package example;    // 包名
+
+option go_package = ".";  // . 代表当前目录生成
+
+// 命令：protoc --proto_path=. --go_out=paths=source_relative:./example  test.proto
+// 生成到 ../example 目录下
+
+message Order{
+     int32 order_id = 1;//1代表字段顺序
+     int64 num = 2;
+     string timestamp = 3;
+}
